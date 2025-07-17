@@ -2,9 +2,9 @@
 export const dynamic = "force-dynamic";
 
 import { Suspense } from "react";
-import dynamic from "next/dynamic";
+import loadDynamic from "next/dynamic";
 
-const Blogs = dynamic(() => import("@/Blogcomponent/Blogs"), { ssr: false });
+const Blogs = loadDynamic(() => import("@/Blogcomponent/Blogs"), { ssr: false });
 
 const AdminSee = () => {
   return (

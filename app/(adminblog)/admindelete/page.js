@@ -2,9 +2,9 @@
 export const dynamic = "force-dynamic";
 
 import { Suspense } from "react";
-import dynamic from "next/dynamic";
+import loadDynamic from "next/dynamic";
 
-const CreDEL = dynamic(() => import("@/Blogcomponent/Create_Delete"), { ssr: false });
+const CreDEL = loadDynamic(() => import("@/Blogcomponent/Create_Delete"), { ssr: false });
 
 const Delete = () => {
   return (

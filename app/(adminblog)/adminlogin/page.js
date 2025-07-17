@@ -2,9 +2,9 @@
 export const dynamic = "force-dynamic";
 
 import { Suspense } from "react";
-import loadDynamic from "next/dynamic";
-
-const Form = loadDynamic(() => import("@/components/form"), { ssr: false });
+//import loadDynamic from "next/dynamic";
+import Form from "@/components/form";
+//const Form = loadDynamic(() => import("@/components/form"), { ssr: false });
 
 const Login = () => {
   return (

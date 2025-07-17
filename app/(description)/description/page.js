@@ -1,4 +1,5 @@
 "use client";
+
 export const dynamicOption = "force-dynamic";
 
 import { Suspense } from "react";

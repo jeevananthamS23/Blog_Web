@@ -1,11 +1,16 @@
 'use client';
-import Form from "@/components/form";
+export const dynamic = "force-dynamic";
+
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
+
+const Form = dynamic(() => import("@/components/form"), { ssr: false });
 
 const Login = () => {
   return (
-    <div>
+    <Suspense fallback={<div>Loading form...</div>}>
       <Form val={"Admin"} />
-    </div>
+    </Suspense>
   );
 };
 

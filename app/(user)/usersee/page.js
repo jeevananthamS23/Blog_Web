@@ -1,11 +1,12 @@
+'use client';
 import Blogs from "@/Blogcomponent/Blogs";
 
-const BlogU=()=>{
-    return(
-        <div>
-            <Blogs></Blogs>
-        </div>
-    )
-}
+const BlogU = () => {
+  return (
+    <div>
+      <Blogs />
+    </div>
+  );
+};
 
-export  default BlogU;
+export default BlogU;

@@ -1,12 +1,12 @@
+'use client';
 import Form from "@/components/form";
 
-const login=()=>{
-    return(
-        <div>
-  
-    <Form  val={"Admin"}></Form>
+const Login = () => {
+  return (
+    <div>
+      <Form val={"Admin"} />
+    </div>
+  );
+};
 
-        </div>
-    )
-}
-export default login;
+export default Login;

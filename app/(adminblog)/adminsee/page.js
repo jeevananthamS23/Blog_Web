@@ -5,7 +5,7 @@ import Blogs from "@/Blogcomponent/Blogs";
 const AdminSee = () => {
   return (
     <div>
-      <SomeComponent />
+      <Blogs></Blogs>
     </div>
   );
 };

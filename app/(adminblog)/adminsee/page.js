@@ -1,11 +1,14 @@
-'use client'; 
+'use client';
 
 import Blogs from "@/Blogcomponent/Blogs";
+import { Suspense } from "react";
 
 const AdminSee = () => {
   return (
     <div>
-      <Blogs></Blogs>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Blogs />
+      </Suspense>
     </div>
   );
 };

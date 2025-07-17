@@ -1,12 +1,8 @@
-import { Suspense } from "react";
+"use client";
+export const dynamic = "force-dynamic";
+
 import Discomp from "@/Blogcomponent/Disci";
 
 export default function DesPage() {
-  return (
-    <div>
-      <Suspense fallback={<div>Loading description...</div>}>
-        <Discomp />
-      </Suspense>
-    </div>
-  );
+  return <Discomp />;
 }

@@ -1,11 +1,8 @@
-
-
 "use client";
-export const dynamic = "force-dynamic"; 
+export const dynamicOption = "force-dynamic";
 
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
-
 
 const Discomp = dynamic(() => import("@/Blogcomponent/Disci"), {
   ssr: false,

@@ -6,12 +6,12 @@ import loadDynamic from "next/dynamic";
 
 const Blogs = loadDynamic(() => import("@/Blogcomponent/Blogs"), { ssr: false });
 
-const BlogU = () => {
+const AdminSee = () => {
   return (
-    <Suspense fallback={<div>Loading user blogs...</div>}>
+    <Suspense fallback={<div>Loading blog data...</div>}>
       <Blogs />
     </Suspense>
   );
 };
 
-export default BlogU;
+export default AdminSee;

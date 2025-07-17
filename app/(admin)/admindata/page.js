@@ -1,9 +1,14 @@
+import { Suspense } from 'react';
 import Datasee from "@/components/data";
-const data=()=>{
-    return(
+
+const Data = () => {
+  return (
     <div>
-         <Datasee></Datasee>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Datasee />
+      </Suspense>
     </div>
-    )
-}
-export default data;
+  );
+};
+
+export default Data;

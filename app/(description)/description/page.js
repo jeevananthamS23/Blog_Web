@@ -1,5 +1,5 @@
 "use client";
-export const dynamic = "force-dynamic";
+export const dynamic = "force-dynamic"; // ensures client-side rendering
 
 import Discomp from "@/Blogcomponent/Disci";
 

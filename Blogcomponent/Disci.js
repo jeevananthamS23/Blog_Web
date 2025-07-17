@@ -4,10 +4,10 @@ import { useSearchParams } from "next/navigation";
 import style from "./Disci.module.css";
 
 const Discomp = () => {
-  const searchparams = useSearchParams();
-  const img = searchparams.get("img");
-  const name = decodeURIComponent(searchparams.get("title"));
-  const des = decodeURIComponent(searchparams.get("des"));
+  const searchParams = useSearchParams();
+  const img = searchParams.get("img");
+  const name = decodeURIComponent(searchParams.get("title") || "");
+  const des = decodeURIComponent(searchParams.get("des") || "");
 
   return (
     <div className={style.card}>

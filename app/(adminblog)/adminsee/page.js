@@ -2,14 +2,17 @@
 export const dynamic = "force-dynamic";
 
 import { Suspense } from "react";
-import loadDynamic from "next/dynamic";
+import dynamic from "next/dynamic";
 
-const Blogs = loadDynamic(() => import("@/Blogcomponent/Blogs"), { ssr: false });
+const BlogsComponent = dynamic(() => import("@/Blogcomponent/Blogs"), {
+  ssr: false,
+  loading: () => <div>Loading blogs...</div>,
+});
 
 const AdminSee = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <Blogs />
+      <BlogsComponent />
     </Suspense>
   );
 };

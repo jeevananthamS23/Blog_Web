@@ -1,12 +1,13 @@
-'use client';
-import Blogs from "@/Blogcomponent/Blogs";
+'use client'; 
 
-const Allblogs = () => {
+import SomeComponent from "@/Blogcomponent/AdminSeeComponent"; 
+
+const AdminSee = () => {
   return (
     <div>
-      <Blogs />
+      <SomeComponent />
     </div>
   );
 };
 
-export default Allblogs;
+export default AdminSee;

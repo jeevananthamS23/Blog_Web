@@ -1,11 +1,16 @@
 'use client';
-import Blogs from "@/Blogcomponent/Blogs";
+export const dynamic = "force-dynamic";
+
+import { Suspense } from "react";
+import loadDynamic from "next/dynamic";
+
+const Blogs = loadDynamic(() => import("@/Blogcomponent/Blogs"), { ssr: false });
 
 const BlogU = () => {
   return (
-    <div>
+    <Suspense fallback={<div>Loading user blogs...</div>}>
       <Blogs />
-    </div>
+    </Suspense>
   );
 };
 

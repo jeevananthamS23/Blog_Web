@@ -1,3 +1,5 @@
+'use client';
+
 import Discomp from "@/Blogcomponent/Disci";
 
 const Des=()=>{

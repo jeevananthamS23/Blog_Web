@@ -2,16 +2,17 @@
 export const dynamic = "force-dynamic";
 
 import { Suspense } from "react";
-import loadDynamic from "next/dynamic";
+import dynamicImport from "next/dynamic"; // ✅ changed name to avoid conflict
 
-const Form = loadDynamic(() => import("@/components/form"), { ssr: false });
+const Form = dynamicImport(() => import("@/components/form"), {
+  ssr: false,
+  loading: () => <div>Loading form...</div>,
+});
 
-const Userlogin = () => {
+export default function Userlogin() {
   return (
     <Suspense fallback={<div>Loading user login...</div>}>
-      <Form val={"User"} />
+      <Form val="User" />
     </Suspense>
   );
-};
-
-export default Userlogin;
+}

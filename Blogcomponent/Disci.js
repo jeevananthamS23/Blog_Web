@@ -5,6 +5,7 @@ import style from "./Disci.module.css";
 
 const Discomp = () => {
   const searchParams = useSearchParams();
+
   const img = searchParams.get("img");
   const name = decodeURIComponent(searchParams.get("title") || "");
   const des = decodeURIComponent(searchParams.get("des") || "");
@@ -12,7 +13,7 @@ const Discomp = () => {
   return (
     <div className={style.card}>
       <h1>Description</h1>
-      <img src={img} alt="home" />
+      <img src={img} alt="Movie" />
       <p>Movie Title: {name}</p>
       <p>Description: {des}</p>
     </div>

@@ -1,6 +1,6 @@
 'use client'; 
 
-import SomeComponent from "@/Blogcomponent/AdminSeeComponent"; 
+import Blogs from "@/Blogcomponent/Blogs";
 
 const AdminSee = () => {
   return (

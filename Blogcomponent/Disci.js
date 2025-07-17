@@ -1,13 +1,13 @@
 "use client";
+
 import { useSearchParams } from "next/navigation";
 import style from "./Disci.module.css";
 
 const Discomp = () => {
   const searchparams = useSearchParams();
   const img = searchparams.get("img");
-   const name = decodeURIComponent(searchparams.get("title"));
+  const name = decodeURIComponent(searchparams.get("title"));
   const des = decodeURIComponent(searchparams.get("des"));
-  
 
   return (
     <div className={style.card}>

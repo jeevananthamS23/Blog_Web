@@ -1,12 +1,12 @@
-'use client';
-
+import { Suspense } from "react";
 import Discomp from "@/Blogcomponent/Disci";
 
-const Des=()=>{
-    return(
-        <div>
-          <Discomp></Discomp>
-        </div>
-    )
+export default function DesPage() {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading description...</div>}>
+        <Discomp />
+      </Suspense>
+    </div>
+  );
 }
-export default Des;

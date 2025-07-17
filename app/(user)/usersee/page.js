@@ -1,17 +1,16 @@
-'use client';
 export const dynamic = "force-dynamic";
 
 import { Suspense } from "react";
-import loadDynamic from "next/dynamic";
+import Blogs from "@/Blogcomponent/Blogs";
 
-const Blogs = loadDynamic(() => import("@/Blogcomponent/Blogs"), { ssr: false });
+const BlogU=()=>{
+    return(
+        <div>
+             <Suspense fallback={<div>Loading...</div>}>
+        <Blogs />
+      </Suspense>
+        </div>
+    )
+}
 
-const AdminSee = () => {
-  return (
-    <Suspense fallback={<div>Loading blog data...</div>}>
-      <Blogs />
-    </Suspense>
-  );
-};
-
-export default AdminSee;
+export  default BlogU;

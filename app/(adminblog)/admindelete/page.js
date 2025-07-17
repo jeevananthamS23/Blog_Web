@@ -1,17 +1,15 @@
-'use client';
 export const dynamic = "force-dynamic";
 
 import { Suspense } from "react";
-import loadDynamic from "next/dynamic";
+import CreDEL from "@/Blogcomponent/Create_Delete";
 
-const CreDEL = loadDynamic(() => import("@/Blogcomponent/Create_Delete"), { ssr: false });
-
-const Delete = () => {
-  return (
-    <Suspense fallback={<div>Loading delete...</div>}>
-      <CreDEL />
-    </Suspense>
-  );
-};
-
+const Delete=()=>{
+    return(
+        <div>
+            <Suspense fallback={<div>Loading...</div>}>
+        <CreDEL />
+      </Suspense>
+        </div>
+    )
+}
 export default Delete;

@@ -1,10 +1,10 @@
 'use client';
-export const dynamic = "force-dynamic";
+export const forceDynamic = "force-dynamic";
 
 import { Suspense } from "react";
-import dynamic from "next/dynamic";  // ✅ Use `dynamic`, not `loadDynamic`
+import loadDynamic from "next/dynamic";
 
-const Blogs = dynamic(() => import("@/Blogcomponent/Blogs"), { ssr: false });
+const Blogs = loadDynamic(() => import("@/Blogcomponent/Blogs"), { ssr: false });
 
 const AdminSee = () => {
   return (
